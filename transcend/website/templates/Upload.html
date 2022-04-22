@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block css %} 
+<link rel="stylesheet" href=" {% static 'website/Upload.css' %} " media="screen">
+{% endblock %}
+
+{% block content %} 
+
+
+    <section class="u-align-center u-clearfix u-image u-shading u-section-1" src=" {% static 'website/' %} " data-image-width="1280" data-image-height="720" id="sec-fc88">
+      <div class="u-align-center u-clearfix u-sheet u-valign-middle u-sheet-1">
+      
+
+        <form method="post">
+          <h2 class="u-text u-text-default u-text-1">Upload your genome</h2>
+          <p class="u-text u-text-2">Click the button below to begin</p>
+          {% csrf_token %}
+          <div class="form-row">
+            <div class="form-group col-md-6 mb-0" style="color:#000000">
+              {{ form.first_name|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-6 mb-0" style="color:#000000">
+              {{ form.last_name|as_crispy_field }}
+            </div>
+          </div style="color:#000000">
+          {{ form.genome|as_crispy_field }}
+          <div class="form-row">
+            <div class="form-group col-md-6 mb-0" style="color:#000000">
+              {{ form.sex|as_crispy_field }}
+            </div>
+            
+          <button type='submit' class='u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1'> Upload genome</button>
+        </form>
+
+
+
+
+
+        {% if url %}
+
+         <p>Uploaded file: <a href = '{{ url }}'>{{ url }}</a></p>
+        {% endif %}
+        
+        
+      </div>
+    </section>
+
+{% endblock %}

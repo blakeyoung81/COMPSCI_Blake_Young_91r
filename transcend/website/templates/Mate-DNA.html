@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %} 
+<link rel="stylesheet" href=" {% static 'website/Mate-DNA.css' %} " media="screen">
+{% endblock %}
+
+{% block content %} 
+
+
+<!---
+
+
+#return a list of suitors based on selection criteria
+-->
+
+
+    <section class="u-align-center u-clearfix u-palette-1-base u-section-1" id="carousel_22b7">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h2 class="u-custom-font u-font-playfair-display u-text u-text-1">Genome results</h2>
+        <p class="u-text u-text-2">Below are all of your results for your potential mate's genome</p>
+        <div class="u-expanded-width u-table u-table-responsive u-table-1">
+          <table class="u-table-entity u-table-entity-1">
+            <colgroup>
+              <col width="16.6%">
+              <col width="16.6%">
+              <col width="16.6%">
+              <col width="16.6%">
+              <col width="17%">
+              <col width="16.6%">
+            </colgroup>
+            <thead class="u-palette-5-dark-2 u-table-header u-table-header-1">
+              <tr style="height: 48px;">
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Mate Name</th>
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Trait 1</th>
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Trait 2</th>
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Trait 3</th>
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Trait 4</th>
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Weighted AVG</th>
+              </tr>
+            </thead>
+            <tbody class="u-palette-5-dark-3 u-table-body u-table-body-1">
+              <tr style="height: 70px;">
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-7">Item #1</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-8">Description</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-9">Description</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-10">Description</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-11"></td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-12">Sanfilippo syndrome type A</td>
+              </tr>
+              <tr style="height: 69px;">
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-13">Item #2</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-14">Description</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-15">Description</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-16">Description</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-17"></td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-18"></td>
+              </tr>
+              <tr style="height: 69px;">
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-19">Item #3</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-20">Description</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-21">Description</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-22">Description</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-23"></td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-24"></td>
+              </tr>
+              <tr style="height: 69px;">
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-25">Item #4</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-26">Description</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-27">Description</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-28">Description</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-29"></td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-30"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    
+    
+{% endblock %}

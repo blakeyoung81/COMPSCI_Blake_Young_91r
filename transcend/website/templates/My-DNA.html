@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %} 
+<link rel="stylesheet" href=" {% static 'website/My-DNA.css' %} " media="screen">
+{% endblock %}
+
+{% block content %} 
+
+
+    <section class="u-align-center u-clearfix u-palette-1-base u-section-1" id="carousel_22b7">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-custom-font u-font-playfair-display u-text u-text-1">Genome results</h2>
+        <p class="u-text u-text-2">Below are all of your results for possible problems in your genome</p>
+        <a href=" {% url 'preferences' %} " data-page-id="78868412" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1">Preferences</a>
+        <div class="u-expanded-width u-table u-table-responsive u-table-1">
+
+        <!-- <table class = 'table'>
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Sex</th>
+              <th>Genome</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for DNA in myDNA %}
+            <tr>
+              <td>{{ DNA.first_name }}</td>
+              <td>{{ DNA.last_name }}</td>
+              <td>{{ DNA.sex }}</td>
+              <td>{{ DNA.genome }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table> -->
+
+          <table class="u-table-entity u-table-entity-1">
+            <colgroup>
+              <col width="12.4%">
+              <col width="12.4%">
+              <col width="12.4%">
+              <col width="9.3%">
+              <col width="15.5%">
+              <col width="12.6%">
+              <col width="12.400000000000011%">
+              <col width="13.300000000000011%">
+            </colgroup>
+
+            
+            <thead class="u-palette-5-dark-2 u-table-header u-table-header-1">
+              <tr style="height: 45px;">
+
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Rsid</th>
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Magnitude</th>
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Repute</th>
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Summary</th>
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Genotype</th>
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Chromosome</th>
+                <th class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-5-dark-1 u-table-cell">Position</th>
+              </tr>
+            </thead>
+         
+            <tbody class="u-palette-5-dark-3 u-table-body u-table-body-1">
+
+              {% for i in analysis %}
+              <tr style="height: 71px;">
+                
+                {% for data in genome.data %}
+                <tr>
+                  <td>{{ genome.first_name }}</td>
+                  <td>{{ genome.last_name }}</td>
+                  <td>{{ genome.sex }}</td>
+                  <td>{{ genome.genome }}</td>
+                </tr>
+                {% endfor %}
+                
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-10" ><a href="https://www.snpedia.com/index.php/{{ i.rsid }}"> {{ i.rsid }}  </a></td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-11">{{ i.magnitude }}</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-12">{{ i.repute }}</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-13">{{ i.summary }}</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-14">{{ i.genotype }}</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-15">{{ i.chromosome }}</td>
+                <td class="u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-cell-16">{{ i.position }}</td>
+              </tr>
+              {% endfor %}
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    
+    
+{% endblock %}

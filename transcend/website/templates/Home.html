@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <section class="u-align-center u-clearfix u-image u-shading u-section-1" id="carousel_2aa8" src=" {% static 'website' %} " data-image-width="1782" data-image-height="1080">
+      <div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1">
+        <h1 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-title u-text-1">DNA analysis</h1>
+        
+        {% if user.is_authenticated %}
+        <p class="u-large-text u-text u-text-body-alt-color u-text-font u-text-variant u-text-2">
+          <a href=" {% url 'about' %} " data-page-id="473020114" class="u-active-none u-border-0 u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1">about</a> | <a href="Preferences.html" data-page-id="78868412" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-3">analyze</a> |<a href="Home.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-4">#transcend<br>
+          </a>
+        </p>
+        <a href=" {% url 'upload' %} " data-page-id="2432814817" class="u-active-white u-border-2 u-border-white u-btn u-button-style u-hover-white u-none u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-5">Upload your genome</a>
+        {% else %}
+        <p class="u-large-text u-text u-text-body-alt-color u-text-font u-text-variant u-text-2">
+          <a href=" {% url 'about' %} " data-page-id="473020114" class="u-active-none u-border-0 u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1">about</a> | <a href="/login" data-page-id="558121146" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-2">login</a> |<a href="Home.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-4">#transcend<br>
+          </a>
+        </p>
+        <a href=" {% url 'register' %} " data-page-id="2432814817" class="u-active-white u-border-2 u-border-white u-btn u-button-style u-hover-white u-none u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-5">Sign up</a>
+        
+        {% endif %}
+      </div>
+    </section>
+  
+{% endblock %}
+    

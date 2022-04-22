@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %} 
+<link rel="stylesheet" href=" {% static 'website/About.css' %} " media="screen">
+{% endblock %}
+
+{% block content %} 
+
+    <section class="u-clearfix u-section-1" id="sec-5658">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="fr-view u-align-center u-clearfix u-rich-text u-text u-text-1">
+          <h1 style="text-align: center;">DNA analysis</h1>
+          <p style="text-align: center;">Quantitative genetics is a field that attempts to account for phenotypic variation among individuals by using various methods of computational analysis. In the age of genome-wide association studies, there is an increasingly vast body of examinable information. The goal of this research project is to create a viable method whereby any two human genome SNP files can be synthesized, and the likelihood of a certain phenotypic expression in the offspring can be predicted. <span style="line-height: 2.0;">
+              <img align="center" style="width: 366px;" class="fr-dib fr-fic" src=" {% static 'website/images/ad61690397955e570e61b5db478e917024bc099bb09fd0ac23a80035dbf017afc0740d425f76f5efe1e1c4ea0fa1c872e4209cf7fcf1b2f9e1e892_1280.png' %} " width="570">The project is an academic attempt at applying different, unconventional computational methods to a preexisting database of genome files. The project will involve creating a website, storing information on a database, coding several algorithms to analyze data, and real time rendering of several pages of results. &nbsp;
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    
+{% endblock %}}
